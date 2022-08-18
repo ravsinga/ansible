@@ -7,3 +7,14 @@
       ansible.builtin.debug:
         msg: URL = {{URL}}
 
+- name: play level variable from a file
+  hosts: all
+  vars_files:
+    - sampe.variable.yml
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+
+
+
